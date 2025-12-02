@@ -12,13 +12,14 @@ const logs_middleware_1 = __importDefault(require("./middleware/logs.middleware"
 const localStorage_util_1 = __importDefault(require("./utils/localStorage.util"));
 const setEnv_1 = require("./utils/setEnv");
 const http_1 = require("http");
+const socket_io_1 = require("socket.io");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 class App {
     constructor() {
         this.app = (0, express_1.default)();
         this.httpServer = (0, http_1.createServer)(this.app);
-        this.io = new Server(this.httpServer, {
+        this.io = new socket_io_1.Server(this.httpServer, {
             cors: {
                 origin: `*`,
             },

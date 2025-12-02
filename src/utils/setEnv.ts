@@ -9,7 +9,7 @@ export class EnvSetup {
     const env = process.env.environment;
     switch (env) {
       case 'local':
-        this.dbURI = `mongodb://localhost:27018`;
+        this.dbURI = `mongodb://localhost:27017/Ghl-DB`;
         // case 'dev':
         //   this.dbURI = `mongodb://${process.env.dbUsername_Dev}:${process.env.dbPassword_Dev}`;
         //   this.invitationLink = constantsUtil.ACCOUNT_INVITATION_BASE_LINK_DEV;
