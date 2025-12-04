@@ -8,11 +8,9 @@ import {v4} from 'uuid';
 const userModel: Schema = new Schema({
   name: {
     type: String,
-    required: true,
   },
   email: {
     type: String,
-    required: true,
     unique: true,
     immutable: true,
   },
@@ -24,10 +22,13 @@ const userModel: Schema = new Schema({
     type: String,
     select: false,
   },
+  type: {
+    type: String,
+  },
   role: {
     type: String,
-    required: true,
   },
+
   isActive: {type: Boolean},
   phone: {
     type: String,
@@ -37,6 +38,18 @@ const userModel: Schema = new Schema({
   },
   sessionIds: {
     type: Array<String>,
+    select: false,
+  },
+  octoparseAccessToken: {
+    type: String,
+    select: false,
+  },
+  octoparseRefreshToken: {
+    type: String,
+    select: false,
+  },
+  octoparseTokenExpiry: {
+    type: Number,
     select: false,
   },
   logTrackingId: {

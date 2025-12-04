@@ -1,0 +1,1 @@
+{"version":3,"file":"octoparse.routes.js","sourceRoot":"","sources":["../../../src/api/routes/octoparse.routes.ts"],"names":[],"mappings":";;;;;AAAA,qCAA+B;AAC/B,yGAAgF;AAGhF,MAAM,MAAM,GAAG,IAAA,gBAAM,GAAE,CAAC;AAExB,MAAM,CAAC,IAAI,CAAC,QAAQ,EAAE,8BAAmB,CAAC,aAAa,CAAC,CAAC;AACzD,MAAM,CAAC,IAAI,CAAC,gBAAgB,EAAE,8BAAmB,CAAC,YAAY,CAAC,CAAC;AAEhE,kBAAe,MAAM,CAAC"}

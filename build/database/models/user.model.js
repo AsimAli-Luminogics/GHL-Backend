@@ -45,11 +45,9 @@ const uuid_1 = require("uuid");
 const userModel = new mongoose_1.Schema({
     name: {
         type: String,
-        required: true,
     },
     email: {
         type: String,
-        required: true,
         unique: true,
         immutable: true,
     },
@@ -61,9 +59,11 @@ const userModel = new mongoose_1.Schema({
         type: String,
         select: false,
     },
+    type: {
+        type: String,
+    },
     role: {
         type: String,
-        required: true,
     },
     isActive: { type: Boolean },
     phone: {
@@ -74,6 +74,18 @@ const userModel = new mongoose_1.Schema({
     },
     sessionIds: {
         type: (Array),
+        select: false,
+    },
+    octoparseAccessToken: {
+        type: String,
+        select: false,
+    },
+    octoparseRefreshToken: {
+        type: String,
+        select: false,
+    },
+    octoparseTokenExpiry: {
+        type: Number,
         select: false,
     },
     logTrackingId: {

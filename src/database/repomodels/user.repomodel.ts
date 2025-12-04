@@ -4,6 +4,7 @@ export class User {
   name = '';
   email = '';
   password = '';
+  type = '';
   verifyToken: string;
   role = '';
   isActive = false;
@@ -11,6 +12,9 @@ export class User {
   gender = '';
   isDeleted = false;
   sessionIds = Array<string>();
+  octoparseAccessToken = '';
+  octoparseRefreshToken = '';
+  octoparseTokenExpiry = 0;
   createdAt = commonUtil.getCurrentDate();
   updatedAt = commonUtil.getCurrentDate();
 }

@@ -10,12 +10,16 @@ class User {
         this.name = '';
         this.email = '';
         this.password = '';
+        this.type = '';
         this.role = '';
         this.isActive = false;
         this.phone = '';
         this.gender = '';
         this.isDeleted = false;
         this.sessionIds = Array();
+        this.octoparseAccessToken = '';
+        this.octoparseRefreshToken = '';
+        this.octoparseTokenExpiry = 0;
         this.createdAt = common_util_1.default.getCurrentDate();
         this.updatedAt = common_util_1.default.getCurrentDate();
     }
