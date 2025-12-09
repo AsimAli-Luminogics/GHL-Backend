@@ -10,7 +10,7 @@ const logSchema = new mongoose_1.Schema({
     requestPayload: mongoose_1.Schema.Types.Mixed,
     responsePayload: mongoose_1.Schema.Types.Mixed,
     responseStatus: Number,
-    userId: String,
+    ConfigurationId: String,
     timeTaken: Number,
     calledAt: { type: Date },
 });

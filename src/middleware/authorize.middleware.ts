@@ -38,7 +38,7 @@ class Authorize {
           }
           const exists = await new TokenService().validateToken(
             token,
-            decoded?.userId,
+            decoded?.ConfigurationId,
             decoded?.sessionId,
           );
           if (exists === null || exists.isDeleted) {
@@ -59,7 +59,7 @@ class Authorize {
           if (store) {
             store.set('ip', req.ip);
             store.set('name', req.name);
-            store.set('userId', req.id);
+            store.set('ConfigurationId', req.id);
             store.set('url', req.originalUrl);
             store.set('method', req.method);
           }

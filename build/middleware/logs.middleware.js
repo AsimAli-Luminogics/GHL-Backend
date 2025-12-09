@@ -40,7 +40,7 @@ const logMiddleware = (req, res, next) => {
                 requestPayload: req.body,
                 responsePayload,
                 responseStatus: res.statusCode,
-                userId: req.id, // Assuming userId is attached to req object
+                ConfigurationId: req.id, // Assuming ConfigurationId is attached to req object
                 timeTaken,
                 calledAt: start,
             });

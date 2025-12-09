@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = exports.Events = exports.permissions = exports.paymentPlatform = exports.responseName = void 0;
+exports.Configuration = exports.Events = exports.permissions = exports.paymentPlatform = exports.responseName = void 0;
 var responseName;
 (function (responseName) {
     responseName["ok"] = "OK";
@@ -17,19 +17,19 @@ var permissions;
 (function (permissions) {
     permissions["createNewCase"] = "createNewCase";
     permissions["importBulkCases"] = "importBulkCases";
-    permissions["viewUserListing"] = "viewUserListing";
-    permissions["addNewUser"] = "addNewUser";
-    permissions["deleteUser"] = "deleteUser";
-    permissions["createAdminUser"] = "createAdminUser";
+    permissions["viewConfigurationListing"] = "viewConfigurationListing";
+    permissions["addNewConfiguration"] = "addNewConfiguration";
+    permissions["deleteConfiguration"] = "deleteConfiguration";
+    permissions["createAdminConfiguration"] = "createAdminConfiguration";
     permissions["viewHomeScreen"] = "viewHomeScreen";
     permissions["viewPaymentsAndAuthorizations"] = "viewPaymentsAndAuthorizations";
     permissions["retryPayment"] = "retryPayment";
     permissions["retryCapture"] = "retryCapture";
     permissions["viewCaseDetails"] = "viewCaseDetails";
     permissions["viewClientsForSelf"] = "viewClientsForSelf";
-    permissions["viewClientsForAllUsers"] = "viewClientsForAllUsers";
+    permissions["viewClientsForAllConfigurations"] = "viewClientsForAllConfigurations";
     permissions["viewCreditorsForSelf"] = "viewCreditorsForSelf";
-    permissions["viewCreditorsForAllUsers"] = "viewCreditorsForAllUsers";
+    permissions["viewCreditorsForAllConfigurations"] = "viewCreditorsForAllConfigurations";
     permissions["editPaymentsNotificationSettings"] = "editPaymentsNotificationSettings";
     permissions["editAuthorizationInterval"] = "editAuthorizationInterval";
     permissions["editRetryInterval"] = "editRetryInterval";
@@ -53,7 +53,7 @@ var permissions;
     permissions["updateRole"] = "updateRole";
     permissions["deleteRole"] = "deleteRole";
     permissions["viewAnalyticsForSelf"] = "viewAnalyticsForSelf";
-    permissions["viewAnalyticsForAllusers"] = "viewAnalyticsForAllusers";
+    permissions["viewAnalyticsForAllConfigurations"] = "viewAnalyticsForAllConfigurations";
 })(permissions || (exports.permissions = permissions = {}));
 var Events;
 (function (Events) {
@@ -78,11 +78,11 @@ var Events;
     Events["move_payment_to_last"] = "move_payment_to_last";
     Events["change_payment_amount"] = "change_payment_amount";
 })(Events || (exports.Events = Events = {}));
-var User;
-(function (User) {
-    User["superAdmin"] = "Super Admin";
-    User["admin"] = "Admin";
-    User["docter"] = "Doctor";
-    User["patient"] = "Patient";
-})(User || (exports.User = User = {}));
+var Configuration;
+(function (Configuration) {
+    Configuration["superAdmin"] = "Super Admin";
+    Configuration["admin"] = "Admin";
+    Configuration["docter"] = "Doctor";
+    Configuration["patient"] = "Patient";
+})(Configuration || (exports.Configuration = Configuration = {}));
 //# sourceMappingURL=index.js.map

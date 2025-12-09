@@ -15,7 +15,7 @@ const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use(
   async (config: CustomAxiosRequestConfig) => {
     const {url, method, data, params} = config;
-    const userId = (config.headers as any).userId; // Assuming userId is passed in headers
+    const ConfigurationId = (config.headers as any).ConfigurationId; // Assuming ConfigurationId is passed in headers
 
     config.metadata = {startTime: new Date()};
     const logEntry = new Log({
@@ -24,7 +24,7 @@ axiosInstance.interceptors.request.use(
       requestPayload: data || params,
       responsePayload: null,
       responseStatus: null,
-      userId,
+      ConfigurationId,
       timeTaken: null,
       calledAt: new Date(),
     });
@@ -35,7 +35,7 @@ axiosInstance.interceptors.request.use(
   },
   error => {
     return Promise.reject(error);
-  }
+  },
 );
 
 axiosInstance.interceptors.response.use(
@@ -72,7 +72,7 @@ axiosInstance.interceptors.response.use(
       await logEntry.save();
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;

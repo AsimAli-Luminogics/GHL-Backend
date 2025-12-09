@@ -61,7 +61,7 @@ class Authorize {
                             .status(constants_util_1.default.CODE.UNAUTHORIZED)
                             .send(responseHelper_util_1.default.get4xxResponse(constants_util_1.default.Messages.AUTHENTICATION_REQUIRED));
                     }
-                    const exists = await new token_service_1.default().validateToken(token, decoded?.userId, decoded?.sessionId);
+                    const exists = await new token_service_1.default().validateToken(token, decoded?.ConfigurationId, decoded?.sessionId);
                     if (exists === null || exists.isDeleted) {
                         return res
                             .status(constants_util_1.default.CODE.FORBIDDEN)
@@ -76,7 +76,7 @@ class Authorize {
                     if (store) {
                         store.set('ip', req.ip);
                         store.set('name', req.name);
-                        store.set('userId', req.id);
+                        store.set('ConfigurationId', req.id);
                         store.set('url', req.originalUrl);
                         store.set('method', req.method);
                     }

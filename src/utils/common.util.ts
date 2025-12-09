@@ -42,7 +42,7 @@ class CommonUtil {
     }
   }
 
-  async getUserDetails(data: any) {
+  async getConfigurationDetails(data: any) {
     return {
       name: data?.basicInformation?.fullName || data?.name,
       email: data?.basicInformation?.email || data?.email,

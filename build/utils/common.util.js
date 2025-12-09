@@ -36,7 +36,7 @@ class CommonUtil {
                 return null;
         }
     }
-    async getUserDetails(data) {
+    async getConfigurationDetails(data) {
         return {
             name: data?.basicInformation?.fullName || data?.name,
             email: data?.basicInformation?.email || data?.email,

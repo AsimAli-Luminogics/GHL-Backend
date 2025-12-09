@@ -55,7 +55,7 @@ class App {
     const appPort = process.env.PORT || 3000;
 
     this.io.on('connection', (socket: Socket) => {
-      console.log('a user connected');
+      console.log('a Configuration connected');
       this.socketInstance = socket;
     });
 

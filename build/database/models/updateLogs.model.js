@@ -9,7 +9,7 @@ const logSchema = new mongoose_1.Schema({
     model: String,
     logTrackingId: String,
     ip: String,
-    userId: String,
+    ConfigurationId: String,
     url: String,
     method: String,
     createdAt: Date,

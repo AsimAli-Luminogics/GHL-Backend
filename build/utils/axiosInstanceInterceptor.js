@@ -9,7 +9,7 @@ const logs_model_1 = __importDefault(require("../database/models/logs.model"));
 const axiosInstance = axios_1.default.create();
 axiosInstance.interceptors.request.use(async (config) => {
     const { url, method, data, params } = config;
-    const userId = config.headers.userId; // Assuming userId is passed in headers
+    const ConfigurationId = config.headers.ConfigurationId; // Assuming ConfigurationId is passed in headers
     config.metadata = { startTime: new Date() };
     const logEntry = new logs_model_1.default({
         url,
@@ -17,7 +17,7 @@ axiosInstance.interceptors.request.use(async (config) => {
         requestPayload: data || params,
         responsePayload: null,
         responseStatus: null,
-        userId,
+        ConfigurationId,
         timeTaken: null,
         calledAt: new Date(),
     });

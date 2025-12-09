@@ -9,7 +9,7 @@ const logSchema = new Schema({
   requestPayload: Schema.Types.Mixed,
   responsePayload: Schema.Types.Mixed,
   responseStatus: Number,
-  userId: String,
+  ConfigurationId: String,
   timeTaken: Number,
   calledAt: {type: Date},
 });

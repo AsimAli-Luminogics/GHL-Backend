@@ -13,19 +13,19 @@ export enum paymentPlatform {
 export enum permissions {
   createNewCase = 'createNewCase',
   importBulkCases = 'importBulkCases',
-  viewUserListing = 'viewUserListing',
-  addNewUser = 'addNewUser',
-  deleteUser = 'deleteUser',
-  createAdminUser = 'createAdminUser',
+  viewConfigurationListing = 'viewConfigurationListing',
+  addNewConfiguration = 'addNewConfiguration',
+  deleteConfiguration = 'deleteConfiguration',
+  createAdminConfiguration = 'createAdminConfiguration',
   viewHomeScreen = 'viewHomeScreen',
   viewPaymentsAndAuthorizations = 'viewPaymentsAndAuthorizations',
   retryPayment = 'retryPayment',
   retryCapture = 'retryCapture',
   viewCaseDetails = 'viewCaseDetails',
   viewClientsForSelf = 'viewClientsForSelf',
-  viewClientsForAllUsers = 'viewClientsForAllUsers',
+  viewClientsForAllConfigurations = 'viewClientsForAllConfigurations',
   viewCreditorsForSelf = 'viewCreditorsForSelf',
-  viewCreditorsForAllUsers = 'viewCreditorsForAllUsers',
+  viewCreditorsForAllConfigurations = 'viewCreditorsForAllConfigurations',
   editPaymentsNotificationSettings = 'editPaymentsNotificationSettings',
   editAuthorizationInterval = 'editAuthorizationInterval',
   editRetryInterval = 'editRetryInterval',
@@ -49,7 +49,7 @@ export enum permissions {
   updateRole = 'updateRole',
   deleteRole = 'deleteRole',
   viewAnalyticsForSelf = 'viewAnalyticsForSelf',
-  viewAnalyticsForAllusers = 'viewAnalyticsForAllusers',
+  viewAnalyticsForAllConfigurations = 'viewAnalyticsForAllConfigurations',
 }
 
 export enum Events {
@@ -75,7 +75,7 @@ export enum Events {
   change_payment_amount = 'change_payment_amount',
 }
 
-export enum User {
+export enum Configuration {
   superAdmin = 'Super Admin',
   admin = 'Admin',
   docter = 'Doctor',
